@@ -1,0 +1,19 @@
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list{
+  flex: 200px;
+  height: 500px;
+  border-right: 1px solid red;
+  padding: 20px;
+  box-sizing: border-box;
+  background: red;
+}
+
+.list:last-of-type{
+  border: none;
+}
