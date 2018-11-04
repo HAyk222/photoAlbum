@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import List from './components/list.js';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import Users from './components/users.js';
+import Albums from './components/albums.js';
+import Images from './components/images.js';
 import './App.css';
 
 class App extends Component {
@@ -8,9 +10,15 @@ class App extends Component {
     return (
       <Router>
         <div className="content">
-          <Route path="/" component={List} />
-          <Route path="/users/:id" component={List} />
-          <Route path="/users/:id/albums/:id" component={List} />
+          <Route 
+            path="/" 
+            component={Users} />
+          <Route 
+            path="/users/:id" 
+            component={Albums} />
+          <Route 
+            path="/users/:id/albums/:id" 
+            component={Images} />
         </div>
       </Router>
     );

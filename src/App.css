@@ -2,18 +2,77 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-start;
 }
 
 .list{
-  flex: 200px;
-  height: 500px;
-  border-right: 1px solid red;
+  position: relative;
+  width: 300px;
+  min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  background: red;
 }
 
-.list:last-of-type{
-  border: none;
+.list-album{
+  flex: 1;
+}
+
+.list:last-of-type img{
+  width: 100px;
+  margin: 10px;
+}
+
+.list a {
+  display: block;
+  max-width: 200px;
+  text-decoration: none;
+  padding: 10px 12px;
+  background: #c4c4;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  color: brown;
+  text-align: center;
+}
+
+.list a.active{
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0px 0px 5px #000000;
+}
+
+.list a:hover{
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0px 0px 5px #000000;
+  transition: all 0.3s linear;
+}
+
+.list img[alt='loading']{
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  width: unset;
+}
+
+.list h2{
+  text-align: center;
+}
+
+.list h2 a{
+  background: unset;
+  color: unset;
+  text-decoration: underline;
+  color: blue;
+}
+
+.list h2 a:hover{
+  background: unset;
+  color: unset;
+  box-shadow: unset;
+}
+
+h2 span{
+  color: blue;
+  text-transform: capitalize;
 }
